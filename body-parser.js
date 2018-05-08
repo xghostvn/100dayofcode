@@ -12,13 +12,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // for parsing multipart/form-data
 //app.use(multer());
-
+app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
 
 
 
-    res.sendFile(__dirname +'/index.html');
+    res.sendFile(__dirname+'/index.ejs');
 });
 
 
@@ -32,3 +32,6 @@ app.post('/',(req,res)=>{
 
 
 app.listen(3000);
+
+
+
