@@ -8,27 +8,34 @@ var bodyParser=require('body-parser');
 //app.use(bodyParser.json()); 
 
 // for parsing application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true })); 
+
+//middleware
+app.use(bodyParser.urlencoded({ extended: true }));   // su dung body-parser
 
 // for parsing multipart/form-data
 //app.use(multer());
 
 
+
+
+
+app.set('view engine','ejs');
+// data = req.body
 app.get('/',(req,res)=>{
-
-
-
-    res.sendFile(__dirname +'/index.html');
+   res.render(__dirname+'/index.ejs'); 
 });
 
 
-
+asdasda
 
 
 app.post('/',(req,res)=>{
-
-    res.end(typeof req.body);
+    console.log(req.body.abc);
+    res.end(typeof req.body.abc);
 });
 
 
 app.listen(3000);
+
+
+
