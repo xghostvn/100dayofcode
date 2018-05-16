@@ -1,0 +1,5 @@
+reflog : show history cursor HEAD 
+$ git reset --soft <commit_id>  : Lệnh này chỉ di chuyển HEAD về vị trí commit. Trạng thái của stage và tất cả sự thay đổi của file sẽ được giữ nguyên.
+$ git reset --hard <commit_id> : Di chuyển con trỏ HEAD về vị trí commmit reset và loại bỏ tất cả sự thay đổi của file sau thời điểm commit reset.5
+
+
